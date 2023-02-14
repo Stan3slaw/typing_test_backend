@@ -65,11 +65,7 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: [
-          'builtin',
-          'external',
-          ['internal', 'parent', 'sibling', 'index'],
-        ],
+        groups: ['builtin', 'external', ['internal', 'parent', 'sibling', 'index']],
         'newlines-between': 'always-and-inside-groups',
       },
     ],
@@ -85,7 +81,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: 'src/**/*.controller.ts',
+      files: ['src/**/*.controller.ts', 'src/**/gateways/*.gateway.ts'],
       rules: {
         'prefer-arrow/prefer-arrow-functions': ['off'],
       },
