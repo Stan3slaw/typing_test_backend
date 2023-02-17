@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 
-import type { CreateUpdateWordsDto } from './dto/create-update-words.dto';
 import { words } from './mock/data';
 import type { Word } from './types/words.types';
 
@@ -25,12 +24,6 @@ export class WordsService {
   };
 
   getWords = (): Word[] => {
-    return WordsService.toWordsResponse(words);
-  };
-
-  addWords = (updateWordsDto: CreateUpdateWordsDto): Word[] => {
-    words.push(...updateWordsDto.words);
-
     return WordsService.toWordsResponse(words);
   };
 }
